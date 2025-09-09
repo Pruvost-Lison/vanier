@@ -1,0 +1,126 @@
+/* Importation des typographies */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables CSS (à définir selon vos couleurs) */
+:root {
+    --dark_blue: #1a1a2e;
+    --green: #00ff00;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 86px;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+/* Styles pour le bouton menu */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu panel */
+.menu-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark_blue);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-panel.go-right {
+    transform: translateX(0);
+}
+
+/* Bouton fermer */
+.btnclose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--green);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Navigation dans le menu */
+.menu-panel__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-panel__nav ul li {
+    margin: 2rem 0;
+}
+
+.menu-panel__nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.menu-panel__nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Styles de base pour le body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 86px; /* Pour compenser le header fixe */
+}
+
+/* Style pour le h1 temporaire */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    color: var(--green);
+}
+
+/* Commentaires sur les styles supprimés/nettoyés :
+- Suppression des règles CSS dupliquées (.menu était défini deux fois)
+- Suppression des classes inutilisées (.menu-panel__list, .menu-panel__item, .menu-panel__link)
+- Ajout des variables CSS pour les couleurs
+- Nettoyage des styles redondants
+- Amélioration de l'organisation et lisibilité du code
+*/

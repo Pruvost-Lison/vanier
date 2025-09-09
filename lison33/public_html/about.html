@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <body>
+    <header class="header">
+        <div class="menu">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- CORRECTION : Chemin correct vers le logo -->
+                    <img src="assets/img/Logo.svg" alt="Logo">
+                </a>
+            </div>
+            <button id="btnmenu" class="menu-toggle" aria-expanded="false" aria-controls="panel" aria-label="Open menu">
+                <!-- CORRECTION : Chemin correct vers l'icône menu -->
+                <img src="assets/img/Menu.svg" alt="">
+            </button>
+        </div>
+    </header>
+
+    <aside id="panel" class="menu-panel" aria-hidden="true">
+        <div class="panel-header">
+            <button class="btnclose" id="hide-menu" aria-label="Close menu">
+                <!-- CORRECTION : Chemin correct vers l'icône fermer -->
+                <img src="assets/img/Close_square.svg" alt="">
+            </button>
+        </div>
+        <nav role="navigation" class="menu-panel__nav">
+            <ul>
+                <li><a href="public_html/motion_graphic.html">Motion Graphic</a></li>
+                <li><a href="public_html/web3.html">Web 3</a></li>
+                <li><a href="public_html/portfolio.html">Portfolio</a></li>
+                <li><a href="public_html/about.html">About</a></li>
+            </ul>
+        </nav>
+    </aside>
+</body>
+</html>
