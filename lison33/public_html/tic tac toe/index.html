@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img class="logo-responsive" src="assets/img/SVG/title_chopstick_duel.svg" alt="Chopstick duel">
+            <h1 class="sr-only">chopstic duel</h1>
+        </header>
+        <section>
+            <p id="message"><img src="#" alt=""></p>
+        </section>
+        
+        <section id="score-section">
+    <div class="score-container">
+        <div class="joueur-score">
+            <img src="assets/img/SVG/Maki_gauche.svg" alt="Joueur O">
+            <span>JOUEUR O</span>
+            <div class="score" id="scoreO">0</div>
+        </div>
+        <div class="joueur-score">
+            <img src="assets/img/SVG/nigizushi.svg" alt="Joueur X">
+            <span>JOUEUR X</span>
+            <div class="score" id="scoreX">0</div>
+        </div>
+    </div>
+</section>
+
+        <section>
+            <article id="grille">
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+                <div class="case"></div>
+            </article>
+        </section>
+        <nav>
+            <button id="replay">Rejouer</button>
+        </nav>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- // texte , replay button, label pour les gagnant, attribute id pour leur parler avec js, container grid // -->

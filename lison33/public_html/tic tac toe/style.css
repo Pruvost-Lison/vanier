@@ -1,0 +1,210 @@
+/* css générale */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #F5ECD7;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Logo*/
+.logo-responsive {
+    width: 15em; 
+    height: 15em;
+    margin-bottom: 0;  
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Scores */
+#score-section {
+    margin: 10px 0;
+}
+
+.score-container {
+    display: flex;
+    gap: 20px;
+}
+
+.joueur-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border: 3px solid #B6241A;
+    border-radius: 25px;
+    padding: 10px 20px;
+    min-width: 100px;
+}
+
+.joueur-score img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.joueur-score span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #413E3E;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #B6241A;
+}
+
+/* Grille */
+#grille {
+    width: 30vmin;
+    height: 30vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+    padding: 15px;
+    background: #413E3E;
+    border: 6px solid #1E1E1E;
+    margin: 10px 0;
+}
+
+.case {
+    background: #413E3E;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.case:hover {
+    background: rgba(255,255,255,0.05);
+    transform: scale(1.02);
+}
+
+/* Message pour match null et gagnant */
+#message {
+    color: #B6241A;
+    font-size: 1.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 1.5rem;
+}
+
+/* Bouton */
+#replay {
+    background: #B6241A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#replay:hover {
+    background: #9A1E16;
+    transform: translateY(-2px);
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 5px solid #B6241A;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+}
+
+.popup-content img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.popup-content h2 {
+    color: #413E3E;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.popup-content h1 {
+    color: #1E1E1E;
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+}
+
+.popup-content p {
+    color: #413E3E;
+    margin-bottom: 20px;
+}
+
+.popup-button {
+    background: #B6241A;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .logo-responsive {
+        width: 9em;
+        height: 9em;
+        margin-bottom: 0%;
+    }
+    
+    #grille {
+        width: 80vw;
+        height: 80vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .score-container {
+        gap: 15px;
+    }
+    
+    .joueur-score {
+        min-width: 80px;
+        padding: 8px 15px;
+    }
+}
